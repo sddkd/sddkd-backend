@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 ]
 
+# django.contrib.sites
+SITE_ID = 1
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -80,6 +83,7 @@ REST_AUTH = {
     'JWT_AUTH_REFRESH_COOKIE': '_refresh',
     'JWT_AUTH_HTTPONLY': False,
     'REGISTER_SERIALIZER': 'sddkd_app.serializers.CustomRegisterSerializer',
+    'USER_DETAILS_SERIALIZER': 'sddkd_app.serializers.CustomUserDetailsSerializer',
 }
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
@@ -87,7 +91,9 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-# AUTH_USER_MODEL = 'sddkd_app.CustomUser'
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
