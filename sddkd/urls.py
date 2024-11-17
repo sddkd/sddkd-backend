@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('dj_rest_auth.urls')),
     path('auth/registration/', include('dj_rest_auth.registration.urls')),
-    path('sddkd/', include('sddkd_app.urls')),
+    path('api/', include('sddkd_app.urls')),
 ]
