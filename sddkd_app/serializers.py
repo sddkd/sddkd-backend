@@ -76,12 +76,16 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 class UsersTasksSerializer(serializers.ModelSerializer):
-    task = TaskSerializer()
     time_spent = serializers.SerializerMethodField()
 
     class Meta:
         model = UsersTasks
         fields = '__all__'
+
+    def to_representation(self, instance):
+        res = super().to_representation(instance)
+        res['task'] = TaskSerializer(instance=instance.task).data
+        return res
 
     def get_time_spent(self, obj):
         return obj.time_spent
@@ -100,9 +104,16 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class PostLikeSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
+
     class Meta:
         model = PostLike
         fields = '__all__'
+
+    def create(self, validated_data):
+        if not validated_data.get('user'):
+            validated_data['user'] = self.context['request'].user.profile
+        return super().create(validated_data)
 
 
 class NotificationSerializer(serializers.ModelSerializer):
