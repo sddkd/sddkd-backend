@@ -33,44 +33,26 @@ ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(",")
 # Application definition
 
 INSTALLED_APPS = [
-    "sddkd_app.apps.SddkdAppConfig",
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.postgres",
-    "django.contrib.staticfiles",
-    "django.contrib.sites",
-    "rest_framework",
-    "rest_framework.authtoken",
-    "rest_framework_simplejwt",
-    "dj_rest_auth",
-    "dj_rest_auth.registration",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    "drf_yasg",
     "corsheaders",
-    "sddkd_app.apps.SddkdAppConfig",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
-    "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.postgres",
-    "django.contrib.staticfiles",
+    "django.contrib.sessions",
     "django.contrib.sites",
+    "django.contrib.staticfiles",
+    "django_filters",
+    "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
-    "dj_rest_auth",
-    "dj_rest_auth.registration",
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "drf_yasg",
-    "django_extensions",
+    "sddkd_app.apps.SddkdAppConfig",
 ]
 
 # django.contrib.sites
@@ -123,10 +105,8 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
 
 ROOT_URLCONF = "sddkd.urls"
 
