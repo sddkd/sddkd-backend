@@ -69,7 +69,7 @@ class UsersTasksViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=["get"], url_path="current-user")
     def current_user_tasks(self, request):
         user = request.user.profile
-        queryset = self.queryset.filter(user=user)
+        queryset = self.queryset.filter(user=user, finished_at=None)
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -115,7 +115,35 @@ class PostViewSet(viewsets.ModelViewSet):
     def current_user_tasks(self, request):
         queryset = self.queryset.order_by("?")
         serializer = self.get_serializer(queryset, many=True)
+        # add user name to the response
+        for post in serializer.data:
+            user = UserProfile.objects.get(id=post["user"])
+            post["user"] = user.user.username
+
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    @action(detail=False, methods=["post"], url_path="user-posts")
+    def create_user_post(self, request):
+        image_base64 = request.data.get("image_base64")
+
+        user_profile = request.user.profile
+
+        user_task = UsersTasks.objects.filter(user=user_profile, finished_at=None)
+        if not user_task:
+            return Response(
+                {"error": "You do not have any active tasks."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        task = user_task[0].task
+
+        new_post = Post.objects.create(
+            user=user_profile, task=task, image_base64=image_base64
+        )
+
+        user_task.update(finished_at=datetime.now())
+
+        return Response(new_post.id, status=status.HTTP_201_CREATED)
 
 
 class PostLikeViewSet(viewsets.ModelViewSet):
