@@ -1,0 +1,50 @@
+[
+  {
+    "model": "sddkd_app.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Landscape",
+      "description": "Capture a broad view of nature, like mountains, a serene meadow, or a coastal beach, emphasizing depth and scenery."
+    }
+  },
+  {
+    "model": "sddkd_app.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Portrait",
+      "description": "Focus on the essence of a human face or bust, with key features like eyes, nose, and mouth sketched quickly."
+    }
+  },
+  {
+    "model": "sddkd_app.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Still Life",
+      "description": "Draw inanimate objects, such as a fruit bowl, a vase of flowers, or an arrangement of everyday items, emphasizing shape and shadow."
+    }
+  },
+  {
+    "model": "sddkd_app.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Animal Study",
+      "description": "Sketch a simplified form of an animal, focusing on basic structure and key characteristics, like the curve of a cat’s back or a bird's beak."
+    }
+  },
+  {
+    "model": "sddkd_app.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Urban Scene",
+      "description": "Depict a street view, with buildings, streetlights, and people moving about, capturing the energy of a city with minimal detail."
+    }
+  },
+  {
+    "model": "sddkd_app.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Seascape",
+      "description": "Illustrate the ocean with waves, a sandy shore, or a boat floating on the water, focusing on the fluidity of the scene."
+    }
+  }
+]

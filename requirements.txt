@@ -9,3 +9,4 @@ dj-rest-auth[with_social]==6.0.0
 django-filter
 drf-yasg
 Pillow
+django-cors-headers

@@ -1,0 +1,110 @@
+[
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Mountain Sketch",
+            "description": "Create a detailed sketch of a mountain range, focusing on depth and perspective to bring out the grandeur of the landscape.",
+            "time_requirements": "00:30:00",
+            "topic": 1
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Meadow Painting",
+            "description": "Paint a serene meadow with wildflowers and a clear sky, emphasizing vibrant colors and natural beauty.",
+            "time_requirements": "00:30:00",
+            "topic": 1
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Quick Portrait",
+            "description": "Draw a quick sketch of a face focusing on proportions and capturing emotion in under an hour.",
+            "time_requirements": "00:30:00",
+            "topic": 2
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Detailed Portrait",
+            "description": "Create a detailed portrait capturing subtle expressions, shading, and fine details of facial features.",
+            "time_requirements": "00:30:00",
+            "topic": 2
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Fruit Bowl Study",
+            "description": "Sketch a fruit bowl with detailed attention to shapes, shadows, and light reflections.",
+            "time_requirements": "00:30:00",
+            "topic": 3
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Flower Vase Drawing",
+            "description": "Draw a vase of flowers, focusing on the petals' texture, the vase’s shape, and the interplay of light and shadow.",
+            "time_requirements": "00:30:00",
+            "topic": 3
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Cat Silhouette",
+            "description": "Sketch the silhouette of a cat, focusing on capturing its curves and posture with simplicity.",
+            "time_requirements": "00:30:00",
+            "topic": 4
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Bird in Flight",
+            "description": "Draw a bird in flight, emphasizing the wingspan and key features such as the beak and feathers.",
+            "time_requirements": "00:30:00",
+            "topic": 4
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "City Street Sketch",
+            "description": "Sketch a bustling city street scene with buildings, people, and vehicles, focusing on perspective.",
+            "time_requirements": "00:30:00",
+            "topic": 5
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Night Scene Drawing",
+            "description": "Illustrate a night-time urban scene, capturing the glow of streetlights and reflections on the pavement.",
+            "time_requirements": "00:30:00",
+            "topic": 5
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Wave Study",
+            "description": "Draw the movement of ocean waves, focusing on their fluidity and the play of light on water.",
+            "time_requirements": "00:30:00",
+            "topic": 6
+        }
+    },
+    {
+        "model": "sddkd_app.task",
+        "fields": {
+            "name": "Boat on the Horizon",
+            "description": "Illustrate a boat floating on the water with a horizon in the background, emphasizing depth and simplicity.",
+            "time_requirements": "00:30:00",
+            "topic": 6
+        }
+    }
+]
